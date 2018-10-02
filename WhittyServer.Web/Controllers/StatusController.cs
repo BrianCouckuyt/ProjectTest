@@ -21,7 +21,7 @@ namespace WhittyServer.Web.Controllers
             _context = context;
         }
 
-
+        //shizznit voor te testen
 
         [HttpPost]
         public ActionResult<PlayerInfo> Login(string email, string password)
