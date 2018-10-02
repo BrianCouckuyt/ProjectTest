@@ -1,12 +1,51 @@
-﻿<Window x:Class="WhittyGittersWPF.MainWindow"
+﻿<Controls:MetroWindow x:Class="WhittyGittersWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:WhittyGittersWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WhittyGitters" Height="450" Width="800">
     <Grid>
-        
+        <Border BorderBrush="#FF3CAFF4" BorderThickness="1" HorizontalAlignment="Left" Height="156" Margin="510,82,0,0" VerticalAlignment="Top" Width="242"/>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Login" FontFamily="Arial" FontSize="14">
+                <Grid>
+                    <Border BorderBrush="#FF3CAFF4" BorderThickness="1" Margin="284,92,10,98"/>
+
+                    <Button x:Name="btnLaunch" Content="Launch Game" HorizontalAlignment="Left" Margin="22,295,0,0" VerticalAlignment="Top" Width="754" Height="54" Click="Button_Click" Foreground="#FF3CAFF4" OpacityMask="Black" BorderBrush="#FF3CAFF4"/>
+                    <Label Content="Log in" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" Width="242" Background="#FF3CAFF4" FontFamily="Arial" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <Label Content="Username" HorizontalAlignment="Left" Margin="22,143,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="95" Foreground="White" Height="34" Background="#FF3CAFF4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="34" Margin="117,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" BorderBrush="#FF3CAFF4" FontFamily="Arial" FontSize="14" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="32" Margin="117,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" BorderBrush="#FF3CAFF4" FontFamily="Arial" FontSize="14" VerticalContentAlignment="Center"/>
+                    <Label Content="Password" HorizontalAlignment="Left" Margin="22,190,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="95" Foreground="White" Height="32" Background="#FF3CAFF4" VerticalContentAlignment="Center"/>
+                    <Button x:Name="btnLogin" Content="Log in" HorizontalAlignment="Left" Margin="22,249,0,0" VerticalAlignment="Top" Width="242" BorderBrush="#FFAAE5FB" Background="#FF3CAFF4" Foreground="White" FontFamily="Arialnt" FontSize="14"/>
+                    <Label x:Name="lblTitel" Content="Survival of the Wittest" Margin="-10,16,-6,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="48" Width="802" HorizontalAlignment="Center" Background="#FF3CAFF4" Foreground="White" HorizontalContentAlignment="Center"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Register" FontFamily="Arial">
+                <Grid>
+                    <Border BorderBrush="#FF3CAFF4" BorderThickness="1" Margin="284,92,10,98"/>
+                    <Label Content="Survival of the Wittest" Margin="-10,16,-6,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="48" Width="802" HorizontalAlignment="Center" Background="#FF3CAFF4" Foreground="White" HorizontalContentAlignment="Center"/>
+                    <Label Content="Register" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" Width="242" Background="#FF3CAFF4" FontFamily="Arial" FontSize="18" FontWeight="Bold" Foreground="White"/>
+                    <Label Content="Username" HorizontalAlignment="Left" Margin="22,141,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="95" Foreground="White" Height="34" Background="#FF3CAFF4" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="txtRegisterUsername" HorizontalAlignment="Left" Height="34" Margin="117,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" BorderBrush="#FF3CAFF4" FontFamily="Arial" FontSize="14" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="txtRegisterPassword" HorizontalAlignment="Left" Height="32" Margin="117,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" BorderBrush="#FF3CAFF4" FontFamily="Arial" FontSize="14" VerticalContentAlignment="Center"/>
+                    <Label Content="Password" HorizontalAlignment="Left" Margin="22,195,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="95" Foreground="White" Height="32" Background="#FF3CAFF4" VerticalContentAlignment="Center"/>
+                    <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="22,322,0,0" VerticalAlignment="Top" Width="754" BorderBrush="#FFAAE5FB" Background="#FF3CAFF4" Foreground="White" FontFamily="Arialnt" FontSize="14"/>
+                    <TextBox x:Name="txtRegisterEmail" HorizontalAlignment="Left" Height="32" Margin="117,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="147" BorderBrush="#FF3CAFF4" FontFamily="Arial" FontSize="14" VerticalContentAlignment="Center"/>
+                    <Label Content="Email" HorizontalAlignment="Left" Margin="22,248,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="16" Width="95" Foreground="White" Height="32" Background="#FF3CAFF4" VerticalContentAlignment="Center"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Highscores" FontFamily="Arial">
+                <Grid>
+                    <Label Content="Survival of the Wittest" Margin="-10,16,-6,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="48" Width="802" HorizontalAlignment="Center" Background="#FF3CAFF4" Foreground="White" HorizontalContentAlignment="Center"/>
+                    <ListBox x:Name="lbHighscores" HorizontalAlignment="Left" Height="266" Margin="12,95,0,0" VerticalAlignment="Top" Width="760" Background="#FFAAE5FB" BorderThickness="1" BorderBrush="#FF00C5FF"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
-</Window>
+</Controls:MetroWindow>
